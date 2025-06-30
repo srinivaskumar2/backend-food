@@ -1,0 +1,184 @@
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.login-popup-container {
+  place-self: center;
+  background-color: #ffffff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: slideUp 0.4s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.login-popup-title h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.login-popup-title img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.login-popup-inputs input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.login-popup-inputs input:focus {
+  border-color: var(--theme-color, #21063e);
+  outline: none;
+  box-shadow: 0 0 5px rgba(33, 6, 62, 0.3);
+}
+
+.login-popup-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--theme-color, #21063e);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-popup-container button:hover {
+  background-color: #370c65;
+}
+
+.login-popup-condition {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-popup-condition input {
+  margin-top: 4px;
+}
+
+.login-popup-toggle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #21063e;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.login-popup-toggle:hover {
+  color: #4c0a8a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-popup-container {
+    padding: 20px 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    gap: 20px;
+  }
+
+  .login-popup-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .login-popup-container button {
+    font-size: 1rem;
+  }
+
+  .login-popup-inputs input {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .login-popup-toggle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .login-popup-container {
+    padding: 18px 16px;
+    border-radius: 10px;
+    max-width: 95%;
+    gap: 18px;
+  }
+
+  .login-popup-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .login-popup-title img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .login-popup-inputs input {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  .login-popup-container button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .login-popup-condition {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  .login-popup-toggle {
+    font-size: 0.85rem;
+  }
+}

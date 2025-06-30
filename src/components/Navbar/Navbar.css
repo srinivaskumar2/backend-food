@@ -1,0 +1,146 @@
+.navbar {
+  padding: 20px 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 180px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.navbar li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar li:hover {
+  color: var(--theme-color);
+}
+
+.navbar .active {
+  border-bottom: 2px solid var(--theme-color);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar button {
+  background-color: var(--theme-color);
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #3da166;
+}
+
+.navbar-basket-icon {
+  position: relative;
+}
+
+.navbar-basket-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  top: -6px;
+  right: -6px;
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+    width: 140px;
+  }
+
+  .navbar-menu {
+    font-size: 1.4rem;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-right {
+    gap: 16px;
+  }
+
+  .navbar button {
+    font-size: 1.3rem;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 4vw;
+  }
+
+  .navbar-menu {
+    justify-content: center;
+  }
+
+  .logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar {
+    padding: 14px 3vw;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .navbar-menu {
+    font-size: 1.3rem;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-right {
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .navbar button {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+  }
+
+  .navbar-basket-icon .dot {
+    top: -5px;
+    right: -5px;
+    min-width: 8px;
+    min-height: 8px;
+  }
+}
