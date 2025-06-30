@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './FoodDisplay.css';
 import { StoreContext } from '../../context/StoreContext';
-import FoodItem from '../FoodItem/FoodItem';
+import FoodCard from '../FoodCard/FoodCard'; // ✅ Fix: Use existing component
 
 const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
@@ -13,7 +13,7 @@ const FoodDisplay = ({ category }) => {
         {food_list
           .filter(item => category === 'All' || item.category === category)
           .map(item => (
-            <FoodItem
+            <FoodCard
               key={item._id}
               id={item._id}
               name={item.name}
