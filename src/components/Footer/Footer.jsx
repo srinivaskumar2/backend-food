@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="footer-right">
           <h2>Get in touch</h2>
           <ul>
-            <li>+91 1234567890</li>
+            <li>+91 98765432212</li>
             <li>enquiry@faceprep.in</li>
           </ul>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => {
       <hr />
 
       <p className="footer-bottom">
-        copyright © 2025 <strong>Jaswanth</strong>. All rights reserved.
+        copyright © 2025 <strong>Srinivas Kumar</strong>. All rights reserved.
       </p>
     </div>
   );
